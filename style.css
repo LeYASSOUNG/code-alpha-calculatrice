@@ -275,6 +275,139 @@ body {
   z-index: 1;
 }
 
+/* ── RESPONSIVE ── */
+
+/* Tablette (≤ 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 24px 16px;
+  }
+
+  .calc {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .btn {
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .result {
+    font-size: 36px;
+  }
+
+  .grid {
+    gap: 8px;
+  }
+
+  /* Historique en overlay sur tablette */
+  .history-panel {
+    position: fixed;
+    left: auto;
+    right: 16px;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%) translateX(20px);
+    width: 260px;
+    max-height: 80vh;
+    z-index: 100;
+    border-radius: 20px;
+  }
+
+  .history-panel.open {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 16px 12px;
+    align-items: flex-start;
+    padding-top: 32px;
+  }
+
+  .wrapper {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .calc {
+    width: 100%;
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .display {
+    min-height: 90px;
+    padding: 16px 16px 12px;
+    margin-bottom: 16px;
+  }
+
+  .result {
+    font-size: 32px;
+  }
+
+  .result.small {
+    font-size: 22px;
+  }
+
+  .expression {
+    font-size: 12px;
+  }
+
+  .grid {
+    gap: 7px;
+  }
+
+  .btn {
+    height: 54px;
+    font-size: 17px;
+    border-radius: 12px;
+  }
+
+  .btn-zero {
+    padding-left: 20px;
+    font-size: 19px;
+  }
+
+  .btn-eq {
+    font-size: 20px;
+  }
+
+  .hint {
+    font-size: 9px;
+    margin-top: 12px;
+  }
+
+  /* Historique en drawer bas sur mobile */
+  .history-panel {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+    max-height: 60vh;
+    border-radius: 20px 20px 0 0;
+    transform: translateY(100%);
+    opacity: 1;
+    padding: 20px 20px 32px;
+    z-index: 200;
+  }
+
+  .history-panel.open {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
 .history-panel.open {
   transform: translateX(20px);
   opacity: 1;
